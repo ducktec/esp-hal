@@ -19,11 +19,12 @@ void         = { version = "1.0", default-features = false }
 xtensa-lx    = { version = "0.6.0", optional = true }
 xtensa-lx-rt = { version = "0.9.0", optional = true }
 procmacros   = { path = "../esp-hal-procmacros", package = "esp-hal-procmacros" }
+cfg-if       = "1.0"
 # IMPORTANT:
 # Each supported device MUST have its PAC included below along with a
 # corresponding feature.
-esp32_pac   = { package = "esp32", git = "https://github.com/esp-rs/esp-pacs.git", branch = "with_source", optional = true }
-esp32c3_pac = { package = "esp32c3", git = "https://github.com/esp-rs/esp-pacs.git", branch = "with_source", optional = true }
+esp32_pac   = { package = "esp32", path = "../../esp-pacs/esp32/", optional = true }
+esp32c3_pac = { package = "esp32c3", path = "../../esp-pacs/esp32c3/",  optional = true }
 esp32s2_pac = { package = "esp32s2", git = "https://github.com/esp-rs/esp-pacs.git", branch = "with_source", optional = true }
 esp32s3_pac = { package = "esp32s3", git = "https://github.com/esp-rs/esp-pacs.git", branch = "with_source", optional = true }
 
